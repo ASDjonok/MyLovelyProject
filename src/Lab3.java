@@ -1,5 +1,16 @@
 public class Lab3 {
     public static void main(String[] args) {
+//        System.out.println("ASD. AS as.".replaceAll("^[a-zA-Z]${2}", "!"));
+
+        String text = "As, aa. Aaaaa.";
+        String[] words = text.split("[,. ]+");
+//        String[] words = text.split("[.]+\\s?");
+        for (String word : words) {
+            System.out.println(word);
+        }
+        System.out.println("========");
+
+
         String s = new String("ASD");
         s = s + "B";
         StringBuilder stringBuilder = new StringBuilder("ASD");

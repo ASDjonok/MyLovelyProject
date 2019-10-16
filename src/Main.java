@@ -9,5 +9,18 @@ public class Main {
 
         long a = scanner.nextLong();
         System.out.printf("a = " + a);
+
+        labelName: for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                if (a > 0) {
+                    break labelName;
+                }
+            }
+        }
+
+    }
+
+    void println(){
+
     }
 }

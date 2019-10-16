@@ -2,12 +2,20 @@ package lab4;
 
 import java.util.Objects;
 
-public class MyClass {
+public class MyClass implements Comparable<MyClass> {
     private int field1;
     private int field2;
     private int field3;
     private int field4;
     private int field5;
+
+    public MyClass(int field1, int field2, int field3, int field4, int field5) {
+        this.field1 = field1;
+        this.field2 = field2;
+        this.field3 = field3;
+        this.field4 = field4;
+        this.field5 = field5;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -30,6 +38,11 @@ public class MyClass {
         return field1;
     }
 
+    /**
+     * Set value to field1 if password is valid
+     * @param field1 value of field1
+     * @param password secret
+     */
     public void setField1(int field1, String password) {
         if (field1 != 13 && password.equals("1111")) {
             this.field1 = field1;
@@ -67,4 +80,23 @@ public class MyClass {
     public void setField5(int field5) {
         this.field5 = field5;
     }
+
+    @Override
+    public String toString() {
+        return "MyClass{" +
+                "field1=" + field1 +
+                ", field2=" + field2 +
+                ", field3=" + field3 +
+                ", field4=" + field4 +
+                ", field5=" + field5 +
+                '}';
+    }
+
+//    @Override
+    public int compareTo(MyClass o) {
+        int result = field2 - o.field2;
+        return result != 0 ? result : field1 - o.field1;
+    }
+
+
 }
