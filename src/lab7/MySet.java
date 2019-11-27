@@ -1,12 +1,18 @@
 package lab7;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.Set;
 
 public class MySet implements Set {
+    static int foo = 1;
     private Object[] elements = new Object[15];
     private int size = 0;
+
+    public MySet(ArrayList<Integer> arrayList) {
+        System.out.println("!!!");
+    }
 
     @Override
     public int size() {
@@ -25,7 +31,17 @@ public class MySet implements Set {
 
     @Override
     public Iterator iterator() {
-        return null;
+        return new Iterator() {
+            @Override
+            public boolean hasNext() {
+                return false;
+            }
+
+            @Override
+            public Object next() {
+                return null;
+            }
+        };
     }
 
     @Override
