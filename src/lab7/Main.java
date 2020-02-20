@@ -5,7 +5,9 @@ import java.util.HashSet;
 
 public class Main {
     public static void main(String[] args) {
-        A a = new A();
+        MySet mySet = new MySet();
+        mySet.clear();
+        /*A a = new A();
         MySet mySet = null;
         System.out.println(mySet.foo);
         ArrayList<Integer> arrayList = new ArrayList();
@@ -14,15 +16,19 @@ public class Main {
         }
         mySet = new MySet(arrayList);
         //...
-        mySet = new MySetChild(arrayList);
+        mySet = new MySetChild(arrayList);*/
 
-        /*ArrayList<String> arrayList = new ArrayList(1);
+        ArrayList<String> arrayList = new ArrayList();
 //        System.out.println(arrayList.getClass());
         arrayList.add("1");
-        arrayList.add("1");
-        System.out.println(arrayList.size());
+        arrayList.add("2");
+        for (String s : arrayList) {
+            System.out.println(s);
+            arrayList.remove(1);
+        }
+//        System.out.println(arrayList.size());
 
-        HashSet hashSet = new HashSet();
+        /*HashSet hashSet = new HashSet();
         hashSet.add("1");
         hashSet.add("1");
         System.out.println(hashSet.size());*/

@@ -14,14 +14,17 @@ public class MySet implements Set {
         System.out.println("!!!");
     }
 
+    public MySet() {
+    }
+
     @Override
     public int size() {
-        return 0;
+        return size;
     }
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return size == 0;
     }
 
     @Override
@@ -69,7 +72,11 @@ public class MySet implements Set {
 
     @Override
     public void clear() {
+//        try {
+            throw new RuntimeException("Not supported:(");
+//        } catch (Exception e) {
 
+//        }
     }
 
     @Override
